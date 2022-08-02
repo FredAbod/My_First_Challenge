@@ -1,12 +1,14 @@
 const express = require('express');
 const {
  userData,
+ getApplicants,
  getAllApplicants,
 } = require('../controllers/user.Controllers');
 const user = require('../models/user');
 const router = express.Router();
 
-router.post('/Fill_Data', userData);
-router.get('/studentsData', getAllApplicants);
+router.post('/create', userData);
+router.get('/students', getApplicants);
+router.get('/counts', getAllApplicants);
 
 module.exports = router;

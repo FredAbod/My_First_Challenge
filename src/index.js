@@ -3,11 +3,15 @@ const express = require('express');
 const morgan = require ('morgan');
 const connectDB = require ('./database/db');
 const userRouter = require ('./routes/user.routes');
+const logger = require ('morgan');
+
+
+
 
 const app = express();
 
 connectDB();
-
+app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(morgan('dev'));
