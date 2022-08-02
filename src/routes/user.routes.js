@@ -4,7 +4,7 @@ const {
  getApplicants,
  getAllApplicants,
 } = require('../controllers/user.Controllers');
-const user = require('../models/user');
+const user = require('../models/User.models');
 const router = express.Router();
 
 router.post('/create', userData);
