@@ -38,7 +38,7 @@ exports.getAllApplicants = async (req, res) => {
   try {
     const Students = await User.find();
     return res.status(200).json({
-      allApplicantsData: Students.length,
+      allApplicantsData: `${Students.length} students have applied`,
       data: Students,
     });
   } catch (error) {
