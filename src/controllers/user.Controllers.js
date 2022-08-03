@@ -26,7 +26,12 @@ exports.getApplicants = async (req, res) => {
       Applicants_data: Students.entries,
       data: Students,
     });
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      message: "Internal Server Error",
+    });
+  }
 };
 
 exports.getAllApplicants = async (req, res) => {
@@ -42,4 +47,27 @@ exports.getAllApplicants = async (req, res) => {
       message: "Internal Server Error",
     });
   }
+};
+
+exports.applicantsUpdate = async (req, res) => {
+try {
+  const id = req.params.id;
+  const { name, email, phoneNo, yourReason} = req.body;
+  const updateApplicants = await User.findOneAndUpdate(
+    id,
+    {
+      name,
+      email,
+      phoneNo,
+      yourReason,
+    },
+    {
+      new: true,
+    }
+  );
+  return res.status(200).json(updateApplicants);
+} catch (error) {
+  console.log(error);
+  return res.status(500).json({error: 'Internal Server Error'});
+}
 };
