@@ -53,7 +53,7 @@ exports.applicantsUpdate = async (req, res) => {
 try {
   const id = req.params.id;
   const { name, email, phoneNo, yourReason} = req.body;
-  const updateApplicants = await User.findOneAndUpdate(
+  const updateApplicants = await User.findByIdAndUpdate(
     id,
     {
       name,

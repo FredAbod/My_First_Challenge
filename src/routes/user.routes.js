@@ -1,11 +1,11 @@
 const express = require('express');
 const {
- userData,
- getApplicants,
- getAllApplicants,
- applicantsUpdate,
+    userData,
+    getApplicants,
+    getAllApplicants,
+    applicantsUpdate,
 } = require('../controllers/user.Controllers');
-const user = require('../models/User.models');
+// const user = require('../models/User.models');
 const router = express.Router();
 
 router.post('/create', userData);
