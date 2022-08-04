@@ -22,10 +22,13 @@ ___________
 - - - - - -
 
 ### My Stack
-1. MongoDB as database 
-2. NodeJs
-3. Express as frame work
-4. Postman API
+1. Vscode as my work environment 
+2. MongoDB as database 
+3. NodeJs as my open source
+4. Postman API for my Documentation
+---------
+### Packages Used
+check package.json folder
 
 _____
 -----
