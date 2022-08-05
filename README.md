@@ -49,7 +49,7 @@ ____
 [Postman link](https://documenter.getpostman.com/view/21992639/Uze1uiZp)
 -------
 
-🌱 I’m currently learning **back end web development** and a student at **At GRAZAC**
+🌱 I’m currently learning **back end web development** and a student at **At GRAZAC ACADEMY**
 
 - 📫 How to reach me **fredrickbolutife@gmail.com**
 
