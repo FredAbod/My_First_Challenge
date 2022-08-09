@@ -12,12 +12,12 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
-app.use("/api", userRouter);
 
 const port = process.env.PORT || 2300;
 
 app.get("/", (req, res) => res.send("Home Page"));
 
+app.use("/api", userRouter);
 app.all("*", (req, res) => {
   return res.status(404).json({ message: "Oops page not found" });
 });
